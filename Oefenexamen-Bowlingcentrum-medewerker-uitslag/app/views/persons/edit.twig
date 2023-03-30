@@ -1,0 +1,18 @@
+{% include "layouts/base.twig" %} {% block content %} {# data: first_name
+insertion last_name score_created_at value #}
+
+<main>
+	<section>
+		<h1>Bewerk score</h1>
+	</section>
+	<section>
+		<form action="{{ globals.urlRoot }}/persons/edit/{{ score.id }}" method="post">
+			<label>
+				Score
+				<input type="number" name="value" value="{{ score.value }}" max="300" required />
+			</label>
+			<input type="submit" value="Bewerk" />
+		</form>
+	</section>
+</main>
+{% endblock %}

@@ -1,0 +1,13 @@
+{
+	"name": "oefenexamen-bowlingcentrum",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "php -S localhost:3000 -t public",
+		"test": "./vendor/bin/phpunit tests"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

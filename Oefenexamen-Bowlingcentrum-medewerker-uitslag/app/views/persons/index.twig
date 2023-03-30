@@ -1,0 +1,38 @@
+{% include "layouts/base.twig" %} {% block content %}
+
+<main>
+	<section>
+		<h1>Personen overzicht</h1>
+	</section>
+	<section>
+		{% if persons is empty %}
+		<span> Er zijn geen resultaten </span>
+		{% else %}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Voornaam</th>
+					<th>Tussenvoegsel</th>
+					<th>Achternaam</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for result in persons %}
+				<tr>
+					<td>{{ result.first_name }}</td>
+					<td>{{ result.insertion }}</td>
+					<td>{{ result.last_name }}</td>
+					<td>
+						<a href="{{ globals.urlRoot }}/persons/detail/{{ result.id }}"
+							>Bekijk</a
+						>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% endif %}
+	</section>
+</main>
+{% endblock %}
