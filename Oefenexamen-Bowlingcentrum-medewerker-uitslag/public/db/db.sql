@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS `manassehdb`;
-CREATE DATABASE `manassehdb`;
-USE `manassehdb`;
+DROP DATABASE IF EXISTS `db`;
+CREATE DATABASE `db`;
+USE `db`;
 
 CREATE TABLE `contact` (
   `id` int NOT NULL,
